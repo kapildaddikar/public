@@ -1,0 +1,45 @@
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" validUntil="2021-03-10T10:08:25Z" cacheDuration="PT604800S"
+entityID="https://control-center.crowdtwist.com/v2/sso/saml" ID="pfx22a03e26-0ed6-7925-1c4f-abcf19e57446">
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<ds:Reference URI="#pfx22a03e26-0ed6-7925-1c4f-abcf19e57446">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>2cdz9MOA4VwiJgvu0bm2yoIIGiwYM+kJrn46JTwcf9s=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>lN0Bsl8/rFL4k66XLvwHaCTlGQzvjPTcQWTbQxcU0HBdKH+CP7vqPlbRX3QZg8uXICj+7jC7uynqX6kR6BjRrc8pfHfP0TU2hC3Mmb4Om3RQQmo5trkz7Y
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>MIIDMDCCAhgCCQDrIbAYL4XvhzANBgkqhkiG9w0BAQsFADBaMQswCQYDVQQGEwJVUzERMA8GA1UECAwITmV3IFlvcmsxFjAUBgNVBAcMDU5ldyBZb3
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature>
+<md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="true"
+protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:KeyDescriptor use="signing">
+<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:X509Data>
+<ds:X509Certificate>MIIDMDCCAhgCCQDrIbAYL4XvhzANBgkqhkiG9w0BAQsFADBaMQswCQYDVQQGEwJVUzERMA8GA1UECAwITmV3IFlvcmsxFjAUBgNVBAcMDU5ldyBZ
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://controlcenter.
+crowdtwist.com/v2/sso/saml/logout?siteId=2&clientId=12"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://controlcenter.
+crowdtwist.com/v2/sso/saml/login?siteId=2&clientId=12" index="1"/>
+<md:AttributeConsumingService index="1">
+<md:ServiceName xml:lang="en">Service</md:ServiceName>
+<md:RequestedAttribute Name="emailAddress" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" isRequired="true"/>
+</md:AttributeConsumingService>
+</md:SPSSODescriptor>
+</md:EntityDescriptor>
